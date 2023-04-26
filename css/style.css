@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+section {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    align-content: center;
+    place-content: center;
+}
+
+h1, p {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3em;
+    font-weight: 600;
+}
+
+form {
+    background-color: rgb(227, 227, 227);
+    padding: 3rem;
+    border-radius: 15px;
+    min-width: 50rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+button, input[type=file]::-webkit-file-upload-button {
+    background: rgb(8, 192, 8);
+    border: none;
+    padding: 1rem;
+    color: white;
+    font-weight: 600;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: all .25s ease;
+}
+
+button:hover, input[type=file]::-webkit-file-upload-button:hover {
+    background: rgb(10, 223, 10);
+}
+
+.compression-level {
+    background: rgb(168, 168, 168);
+    transition: all .25s ease;
+}
+
+.compression-level:focus {
+    background: rgb(8, 192, 8);
+}
+
+.compression-level:focus:hover {
+    background: rgb(10, 223, 10);
+}
+
+.compression-level:hover {
+    background: rgb(190, 190, 190);
+
+}
+
+#output {
+    height: 2rem;
+    text-align: center;
+    padding: 1rem;
+}

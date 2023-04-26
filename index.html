@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Image to WebP Converter</title>
+  </head>
+  <body>
+    <section>
+        <h1>Image to WebP Converter</h1>
+        <p>You can upload PNG, jpeg and jpg files and convert them to WebP format. 
+            <br>
+            You can also choose the quality rate to get smaller og larger files.
+        </p>
+        <form enctype="multipart/form-data">
+            <input type="file" id="file-input" accept=".png,.jpg,.jpeg" onchange="onFileSelected()">
+            <div>
+              <button class="compression-level" type="button" onclick="setQuality(0.5)">50%</button>
+              <button class="compression-level" type="button" onclick="setQuality(0.75)">75%</button>
+              <button class="compression-level" type="button" onclick="setQuality(0.9)">90%</button>
+              <button type="button" onclick="convertToWebp()">Convert to WebP</button>
+            </div>
+          </form>
+    <div id="output"></div>
+    </section>
+    <script src="./js/convert.js"></script>
+  </body>
+</html>
