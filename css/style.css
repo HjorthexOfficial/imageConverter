@@ -6,11 +6,12 @@
 }
 
 section {
-    height: 100vh;
+    min-height: 100vh;
     width: 100vw;
     display: grid;
     align-content: center;
     place-content: center;
+    gap: 1rem;
 }
 
 h1, p {
@@ -21,13 +22,36 @@ h1, p {
 h1 {
     font-size: 3em;
     font-weight: 600;
+    animation: title-in 3s ease;
 }
+
+@keyframes title-in {
+    0% {
+        transform: translateY(-2rem);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+p {
+    opacity: 0;
+    animation: text-in 3s 1s ease forwards;
+}
+
+@keyframes text-in {
+    100% {
+        opacity: 1;
+    }
+}
+
 
 form {
     background-color: rgb(227, 227, 227);
     padding: 3rem;
     border-radius: 15px;
-    min-width: 50rem;
+    width: 50rem;
     display: flex;
     justify-content: space-between;
 }
@@ -62,11 +86,35 @@ button:hover, input[type=file]::-webkit-file-upload-button:hover {
 
 .compression-level:hover {
     background: rgb(190, 190, 190);
-
 }
 
 #output {
     height: 2rem;
     text-align: center;
     padding: 1rem;
+    margin-bottom: 1rem;
+    color: rgb(8, 192, 8);
+}
+
+.preview-container {
+    display: flex;
+    max-width: 50rem;
+    gap: 2rem;
+}
+
+.preview-container canvas {
+    width: 100%;
+}
+
+#download-btn:hover {
+    animation: download 2s infinite;
+}
+
+@keyframes download {
+    25% {
+        box-shadow: 0 0 0px 10px rgb(13, 161, 13, .25);
+    }
+    100% {
+        box-shadow: 0 0 20px 10px rgb(13, 161, 13, 0);
+    }
 }
