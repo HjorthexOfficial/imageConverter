@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script defer src="https://cdn.jsdelivr.net/npm/jszip@3.6.0/dist/jszip.min.js"></script>
+    <script defer src="./js/bulkConvert.js"></script>
+    <link rel="stylesheet" href="./css/bulkstyle.css">
+    <title>Convert Images to WebP</title>
+</head>
+
+<body>
+
+    <header>
+		<div class="logo">
+			<a href="#">
+				<img src="./images/logo.png" alt="Logo">
+			</a>
+		</div>
+		<nav>
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+		</nav>
+		<div class="cta">
+			<button>Convert and Download</button>
+		</div>
+	</header>
+    <section>
+
+        <h1>Image bulk converter</h1>
+        <div>
+
+            <input type="file" id="file-input" multiple>
+            <button id="convert-button">Convert and Download</button>
+        </div>
+
+        <div class="file-names">
+            <h2>Selected Files:</h2>
+            <ul></ul>
+        </div>
+        <div class="progress-bar-container">
+            <div class="progress-bar"></div>
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.6.0/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+    <script src="./js/bulkConvert.js"></script>
+</body>
+
+</html>
